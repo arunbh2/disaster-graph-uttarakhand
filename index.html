@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uttarakhand Disaster Resilience &amp; Early Warning Knowledge Graph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vis‑network styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.css" integrity="sha512-nEUTmtig1QC6o3ehLJWOXG/WOGgTNOdfTw2P+xOL4ZbYU6mCf6Yt7RFRL4CMfaeC4yBr93qe0Po0t0sT9gfo4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 20px 40px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+        }
+        #graph-container {
+            padding: 20px;
+        }
+        #network {
+            height: 650px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        #legend {
+            margin-top: 20px;
+        }
+        #legend h3 {
+            margin: 0 0 8px 0;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            font-size: 0.85rem;
+        }
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            margin-right: 6px;
+            border-radius: 50%;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-top: 1px solid #bdc3c7;
+        }
+        footer ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.85rem;
+        }
+        footer li {
+            margin-bottom: 6px;
+        }
+        footer a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Uttarakhand Disaster Resilience &amp; Early Warning Knowledge Graph</h1>
+        <p>An interactive network of hazards, organisations, projects and infrastructure related to disaster risk reduction and early warning systems in the Indian state of Uttarakhand.</p>
+    </header>
+    <div id="graph-container">
+        <div id="network"></div>
+        <div id="legend">
+            <h3>Legend</h3>
+            <div class="legend-item"><div class="legend-color" style="background-color:#e74c3c"></div>Hazard</div>
+            <div class="legend-item"><div class="legend-color" style="background-color:#3498db"></div>Organisation</div>
+            <div class="legend-item"><div class="legend-color" style="background-color:#9b59b6"></div>System / App</div>
+            <div class="legend-item"><div class="legend-color" style="background-color:#1abc9c"></div>Infrastructure</div>
+            <div class="legend-item"><div class="legend-color" style="background-color:#f39c12"></div>Project / Initiative</div>
+            <div class="legend-item"><div class="legend-color" style="background-color:#2ecc71"></div>Outcome / Process</div>
+            <div class="legend-item"><div class="legend-color" style="background-color:#95a5a6"></div>Community</div>
+        </div>
+    </div>
+    <footer>
+        <h3>Sources</h3>
+        <ul>
+            <li>Times of India article describing IIT Roorkee’s regional early warning system, installation of seismic sensors, sirens and a mobile app【270580381531938†L40-L59】.</li>
+            <li>Times of India report on enhancing the Bhudev app and expanding sensors and sirens across Uttarakhand【562488657515691†L165-L183】.</li>
+            <li>World Bank story on the Uttarakhand Disaster Recovery Project, which built bridges and resilient infrastructure and strengthened the state’s disaster management institutions【898961771599429†L431-L449】.</li>
+            <li>Peer‑reviewed case study explaining that the Uttarakhand State Earthquake Early Warning System includes 170 accelerometers in seismogenic areas, transmits ground‑motion data to a central server 24/7 and issues warnings via a mobile app and sirens【92380564911551†L200-L214】.</li>
+        </ul>
+        <p>Use your mouse to drag nodes and explore relationships. Zoom in/out with your scroll wheel.</p>
+    </footer>
+    <!-- Vis‑network library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/vis-network.min.js" integrity="sha512-izDc/0SufZ0loXSD/llmX3qiKyP8cTfs9bSYrwTS73ZdoFi/zc9J9q+6oE3JnuRmqqbIflVh9XlBkpBwhCwU7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="graph.js"></script>
+</body>
+</html>
